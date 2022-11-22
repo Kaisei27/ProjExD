@@ -16,17 +16,3 @@ for a in b:
     if a != b:
         f += 1
 print("表示文字は : " + str(f) )
-
-#e = []
-#e=[]
-#for c1 in a:
- #   for c2 in d:
-  #      pass
-   ##        if c1 == c2:
-     #           if c1 == c3:
-      #              continue
-       #         e += c1
-#e = a.remove(d)
-
-#e = list(set(str(a)) & set(str(d)))
-
