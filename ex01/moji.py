@@ -16,3 +16,4 @@ for a in b:
     if a != b:
         f += 1
 print("表示文字は : " + str(f) )
+
