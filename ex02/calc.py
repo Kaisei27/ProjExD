@@ -1,9 +1,6 @@
 import tkinter as tk
 import tkinter.messagebox as tkm
 
-def button_click(event):
-    btn = event.widget
-    num = btn["text"]
     #tk.END.insert(0)
     #tkm.showinfo("",f"{num}ボタンがクリックされました")
 def button_numclick(event):
@@ -15,7 +12,9 @@ def equal_click(event):
     resp = eval(eqn)
     entry.delete(0,tk.END)    
     entry.insert(tk.END,resp)
-    
+    if resp == 10:
+        button = tk.Button(root,text)
+
 #ウィンドウ作成
 root = tk.Tk()
 root.geometry("400x500")
