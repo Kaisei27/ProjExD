@@ -4,7 +4,12 @@ import tkinter.messagebox as tkm
 def button_click(event):
     btn = event.widget
     num = btn["text"]
-    tkm.showinfo("",f"{num}ボタンがクリックされました")
+    #tk.END.insert(0)
+    #tkm.showinfo("",f"{num}ボタンがクリックされました")
+def button_numclick(event):
+    btn = event.widget
+    num = btn["text"]
+    entry.insert(tk.END,num)
 
 #ウィンドウ作成
 root = tk.Tk()
@@ -19,7 +24,7 @@ r,c = 1,0
 for num in range(9,-1,-1):
     button = tk.Button(root,text=f"{num}",font=("",30),width=4,height=2)
     button.grid(column = c,row = r)
-    button.bind("<1>",button_click)
+    button.bind("<1>",button_numclick)
     
     c += 1
     if c%3 == 0:
@@ -29,11 +34,11 @@ for num in range(9,-1,-1):
 #+ボタン
 button = tk.Button(root,text="+",font=("",30),width=4,height=2)
 button.grid(column=1,row=4)
-button.bind("<1>",button_click)
+button.bind("<1>",button_numclick)
 
 #=ボタン
 button = tk.Button(root,text="-",font=("",30),width=4,height=2)
 button.grid(column=2,row=4)
-button.bind("<1>",button_click)
+button.bind("<1>",button_numclick)
 
 root.mainloop()
