@@ -4,7 +4,8 @@ import tkinter.messagebox as tkm
 def button_click(event):
     btn = event.widget
     num = btn["text"]
-   # tkm.showinfo("",f"{num}ボタンがクリックされました")
+    tkm.showinfo("",f"{num}ボタンがクリックされました")
+    
 #ウィンドウ作成
 root = tk.Tk()
 root.geometry("300x500")
@@ -23,5 +24,6 @@ for num in range(9,-1,-1):
     if c%3 == 0:
         r += 1
         c = 0
+
 
 root.mainloop()
