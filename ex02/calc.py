@@ -15,9 +15,10 @@ def equal_click(event):
     resp = eval(eqn)
     entry.delete(0,tk.END)    
     entry.insert(tk.END,resp)
+    
 #ウィンドウ作成
 root = tk.Tk()
-root.geometry("300x500")
+root.geometry("400x500")
 #4
 entry = tk.Entry(root,width=10,font=("",40),justify="right")
 entry.grid(row=0,column=0,columnspan=3)
@@ -39,6 +40,22 @@ button = tk.Button(root,text="+",font=("",30),width=4,height=2)
 button.grid(column=1,row=4)
 button.bind("<1>",button_numclick)
 
+#-ボタン
+button = tk.Button(root,text="-",font=("",30),width=4,height=2)
+button.grid(column=3,row=4)
+button.bind("<1>",button_numclick)
+#÷ボタン
+button = tk.Button(root,text="/",font=("",30),width=4,height=2)
+button.grid(column=3,row=3)
+button.bind("<1>",button_numclick)
+#×ボタン
+button = tk.Button(root,text="*",font=("",30),width=4,height=2)
+button.grid(column=3,row=2)
+button.bind("<1>",button_numclick)
+#%ボタン
+button = tk.Button(root,text="%",font=("",30),width=4,height=2)
+button.grid(column=3,row=1)
+button.bind("<1>",button_numclick)
 #=ボタン
 button = tk.Button(root,text="=",font=("",30),width=4,height=2)
 button.grid(column=2,row=4)
