@@ -15,7 +15,7 @@ entry = tk.Entry(root,width=10,font=("",40),justify="right")
 entry.grid(row=0,column=0,columnspan=3)
 
 #ボタン作成
-r,c = 2,0
+r,c = 1,0
 for num in range(9,-1,-1):
     button = tk.Button(root,text=f"{num}",font=("",30),width=4,height=2)
     button.grid(column = c,row = r)
@@ -25,5 +25,15 @@ for num in range(9,-1,-1):
     if c%3 == 0:
         r += 1
         c = 0
+
+#+ボタン
+button = tk.Button(root,text="+",font=("",30),width=4,height=2)
+button.grid(column=1,row=4)
+button.bind("<1>",button_click)
+
+#=ボタン
+button = tk.Button(root,text="-",font=("",30),width=4,height=2)
+button.grid(column=2,row=4)
+button.bind("<1>",button_click)
 
 root.mainloop()
