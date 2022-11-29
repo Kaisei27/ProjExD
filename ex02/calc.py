@@ -1,18 +1,27 @@
 import tkinter as tk
 import tkinter.messagebox as tkm
 
-def button_click_0(event):
+def button_click(event):
     btn = event.widget
-    txt = btn["0"]
-    tkm.showinfo(txt,f"[{txt}]ボタンが押されました")
-
+    num = btn["text"]
+   # tkm.showinfo("",f"{num}ボタンがクリックされました")
 #ウィンドウ作成
 root = tk.Tk()
-root.title("練習問題")
 root.geometry("300x500")
-root.mainloop()
+
+#4
+#entry = tk.Entry(root,justify="right",width=10,font=("") )
 
 #ボタン作成
-#button = tk.Button(root,text = "押すな",command = button_click)
-#button.bind("<1>",button_click_0)
-#button.pack()
+r,c = 0,0
+for num in range(9,-1,-1):
+    button = tk.Button(root,text=f"{num}",width=4,height=2,font=("",30))
+    button.grid(column = c,row = r)
+    button.bind("<1>",button_click)
+    
+    c += 1
+    if c%3 == 0:
+        r += 1
+        c = 0
+
+root.mainloop()
