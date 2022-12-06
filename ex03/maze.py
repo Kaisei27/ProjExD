@@ -1,24 +1,24 @@
 import tkinter as tk
 #練習8
-#import maze_maker as mm
+import maze_maker as mm
 
 #練習5
-#def key_down(event):
-    #global key
-    #key = event.keysym
+def key_down(event):
+    global key
+    key = event.keysym
 
 #練習6
-#def key_up(event):
-    #global key
-    #key = ""
+def key_up(event):
+    global key
+    key = ""
 
 #練習7
-#def main_proc():
-    #global cx, cy
-    #if key == "Up": cy -= 20
-    #if key == "Down": cy += 20
-    #if key == "Left": cx -= 20
-    #if key == "Right": cx += 20
+def main_proc():
+    global cx, cy
+    if key == "Up": cy -= 20
+    if key == "Down": cy += 20
+    if key == "Left": cx -= 20
+    if key == "Right": cx += 20
     #練習11
     #global mx, my
     #if key == "Up": my -= 1
@@ -64,6 +64,6 @@ if __name__ == "__main__":
     #練習6
     root.bind("<KeyRelease>", key_up)
     #練習7
-    #main_proc()
+    main_proc()
 
-    #root.mainloop()
+    root.mainloop()
