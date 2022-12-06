@@ -58,7 +58,7 @@ if __name__ == "__main__":
     #tori = tk.PhotoImage(file="fig/8.png")
     #canvas.create_image(cx, cy, image=tori, tag="kokaton")
     #練習4
-    #key = ""
+    key = ""
     #練習5
     #root.bind("<KeyPress>", key_down)
     #練習6
