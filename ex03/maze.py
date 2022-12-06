@@ -21,11 +21,11 @@ def main_proc():
     if key == "Left": cx -= 20
     if key == "Right": cx += 20
     #練習11
-    #global mx, my
-    #if key == "Up": my -= 1
-    #if key == "Down": my += 1
-    #if key == "Left": mx -= 1
-    #if key == "Right": mx += 1
+    global mx, my
+    if key == "Up": my -= 1
+    if key == "Down": my += 1
+    if key == "Left": mx -= 1
+    if key == "Right": mx += 1
     #練習12
     #if maze_lst[mx][my] == 1: # 移動先が壁だったら
         #if key == "Up": my += 1
