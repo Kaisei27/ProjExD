@@ -62,7 +62,7 @@ if __name__ == "__main__":
     #練習5
     root.bind("<KeyPress>", key_down)
     #練習6
-    #root.bind("<KeyRelease>", key_up)
+    root.bind("<KeyRelease>", key_up)
     #練習7
     #main_proc()
 
