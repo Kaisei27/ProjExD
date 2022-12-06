@@ -67,11 +67,11 @@ if __name__ == "__main__":
     tori = tk.PhotoImage(file="fig/8.png")
     canvas.create_image(cx, cy, image=tori, tag="kokaton")
 
-    #start
+    #startの座標と表示
     start_x , start_y = 150,50
     start = tk.PhotoImage(file="fig/start.png")
     canvas.create_image(start_x,start_y,image=start)
-    #goal
+    #goalの座標と表示
     goal_x , goal_y = 1350,850
     goal = tk.PhotoImage(file="fig/goal.png")
     canvas.create_image(goal_x,goal_y,image=goal)
