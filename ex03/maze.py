@@ -51,7 +51,7 @@ if __name__ == "__main__":
     #mm.show_maze(canvas, maze_lst)
 
     #練習3
-    #cx, cy = 300, 400
+    cx, cy = 300, 400
     #練習12
     #mx,my = 1,1
     #cx,cy = mx*100+50,my*100+50
