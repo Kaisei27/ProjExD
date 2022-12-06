@@ -36,6 +36,14 @@ def main_proc():
     canvas.coords("kokaton", cx, cy)
     root.after(100, main_proc)
 
+#goal時の演出
+def goal_f():
+    global mx , my , ome_x, ome_y
+    if mx == 13 and my == 7:
+        ome_x , ome_y = 700,500
+        ome = tk.PhotoImage(file="fig/ome.png")
+        canvas.create_image(ome_x,ome_y,image=ome)
+        root.after_cancel(100, goal_f)
 
 
 #練習1
@@ -58,6 +66,17 @@ if __name__ == "__main__":
     cx,cy = mx*100+50,my*100+50
     tori = tk.PhotoImage(file="fig/8.png")
     canvas.create_image(cx, cy, image=tori, tag="kokaton")
+
+    #start
+    start_x , start_y = 150,50
+    start = tk.PhotoImage(file="fig/start.png")
+    canvas.create_image(start_x,start_y,image=start)
+    #goal
+    goal_x , goal_y = 1350,850
+    goal = tk.PhotoImage(file="fig/goal.png")
+    canvas.create_image(goal_x,goal_y,image=goal)
+    
+    canvas.pack()   
     #練習4
     key = ""
     #練習5
@@ -66,5 +85,6 @@ if __name__ == "__main__":
     root.bind("<KeyRelease>", key_up)
     #練習7
     main_proc()
+    goal_f()
 
     root.mainloop()
