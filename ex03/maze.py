@@ -47,7 +47,7 @@ if __name__ == "__main__":
     canvas.pack()
 
     #練習9
-    #maze_lst = mm.make_maze(15,9)
+    maze_lst = mm.make_maze(15,9)
     #練習10
     #mm.show_maze(canvas, maze_lst)
 
