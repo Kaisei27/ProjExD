@@ -27,14 +27,14 @@ def main_proc():
     if key == "Left": mx -= 1
     if key == "Right": mx += 1
     #練習12
-    #if maze_lst[mx][my] == 1: # 移動先が壁だったら
-        #if key == "Up": my += 1
-        #if key == "Down": my -= 1
-        #if key == "Left": mx += 1
-        #if key == "Right": mx -= 1        
-    #cx, cy = mx*100+50, my*100+50
-    #canvas.coords("kokaton", cx, cy)
-    #root.after(100, main_proc)
+    if maze_lst[mx][my] == 1: # 移動先が壁だったら
+        if key == "Up": my += 1
+        if key == "Down": my -= 1
+        if key == "Left": mx += 1
+        if key == "Right": mx -= 1        
+    cx, cy = mx*100+50, my*100+50
+    canvas.coords("kokaton", cx, cy)
+    root.after(100, main_proc)
 
 
 
@@ -54,10 +54,10 @@ if __name__ == "__main__":
     #練習3
     cx, cy = 300, 400
     #練習12
-    #mx,my = 1,1
-    #cx,cy = mx*100+50,my*100+50
-    #tori = tk.PhotoImage(file="fig/8.png")
-    #canvas.create_image(cx, cy, image=tori, tag="kokaton")
+    mx,my = 1,1
+    cx,cy = mx*100+50,my*100+50
+    tori = tk.PhotoImage(file="fig/8.png")
+    canvas.create_image(cx, cy, image=tori, tag="kokaton")
     #練習4
     key = ""
     #練習5
