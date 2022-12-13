@@ -54,9 +54,9 @@ def main():
         # 練習5
         screen_sfc.blit(bmimg_sfc, bmimg_rct)
         # 練習7
-        #yoko, tate = check_bound(bmimg_rct, screen_rct)
-        #vx *= yoko
-        #vy *= tate
+        yoko, tate = check_bound(bmimg_rct, screen_rct)
+        vx *= yoko
+        vy *= tate
 
         # 練習8
         #if kkimg_rct.colliderect(bmimg_rct): return 
