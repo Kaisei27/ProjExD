@@ -28,11 +28,6 @@ def main():
     plimg_rct = plimg_sfc.get_rect()
     plimg_rct.center = 200,100
 
-    # 練習5：爆弾
-    #bmimg_sfc = pg.Surface((20, 20)) # Surface
-    #bmimg_sfc.set_colorkey((0, 0, 0)) 
-    #pg.draw.circle(bmimg_sfc, (255, 0, 0), (10, 10), 10)
-
     bmimg_sfc = pg.image.load("fig/bomhei1.png")
     bmimg_sfc = pg.transform.scale(bmimg_sfc,(100,100))
     bmimg_rct = bmimg_sfc.get_rect() # Rect
@@ -123,14 +118,6 @@ def main():
         # 練習8
         if kkimg_rct.colliderect(bmimg_rct): return 
         elif kkimg_rct.colliderect(bmimg2_rct): return
-        #_rct.collidedict(itimg_rct): 
-         #   key_states = pg.key.get_pressed() # 辞書
-          #  if key_states[pg.K_UP]    == True: kkimg_rct.centery -= 1
-           # if key_states[pg.K_DOWN]  == True: kkimg_rct.centery += 1
-           # if key_states[pg.K_LEFT]  == True: kkimg_rct.centerx -= 1
-           # if key_states[pg.K_RIGHT] == True: kkimg_rct.centerx += 1
-
-            #screen_sfc.blit(kkimg_sfc, kkimg_rct)
 
         if plimg_rct.colliderect(kkimg_rct): return  
 
