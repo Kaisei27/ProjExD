@@ -57,7 +57,7 @@ def main():
         for event in pg.event.get():
             if event.type == pg.QUIT: return
 
-        #罠
+        #プレイヤー2による罠設置機能
         key_states3 = pg.key.get_pressed()
         if key_states3[pg.K_r] == True:
             pushed = True
