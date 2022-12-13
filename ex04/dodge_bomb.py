@@ -52,7 +52,7 @@ def main():
         # 練習6
         #bmimg_rct.move_ip(vx, vy)
         # 練習5
-        #screen_sfc.blit(bmimg_sfc, bmimg_rct)
+        screen_sfc.blit(bmimg_sfc, bmimg_rct)
         # 練習7
         #yoko, tate = check_bound(bmimg_rct, screen_rct)
         #vx *= yoko
