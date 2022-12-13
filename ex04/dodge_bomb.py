@@ -42,12 +42,12 @@ def main():
         if key_states[pg.K_LEFT]  == True: kkimg_rct.centerx -= 1
         if key_states[pg.K_RIGHT] == True: kkimg_rct.centerx += 1
         # 練習7
-        #if check_bound(kkimg_rct, screen_rct) != (1, 1): # 領域外だったら
-         #   if key_states[pg.K_UP]    == True: kkimg_rct.centery += 1
-          #  if key_states[pg.K_DOWN]  == True: kkimg_rct.centery -= 1
-           # if key_states[pg.K_LEFT]  == True: kkimg_rct.centerx += 1
-            #if key_states[pg.K_RIGHT] == True: kkimg_rct.centerx -= 1
-        #screen_sfc.blit(kkimg_sfc, kkimg_rct)
+        if check_bound(kkimg_rct, screen_rct) != (1, 1): # 領域外だったら
+           if key_states[pg.K_UP]    == True: kkimg_rct.centery += 1
+            if key_states[pg.K_DOWN]  == True: kkimg_rct.centery -= 1
+            if key_states[pg.K_LEFT]  == True: kkimg_rct.centerx += 1
+            if key_states[pg.K_RIGHT] == True: kkimg_rct.centerx -= 1
+        screen_sfc.blit(kkimg_sfc, kkimg_rct)
 
         # 練習6
         bmimg_rct.move_ip(vx, vy)
