@@ -72,15 +72,6 @@ def load_sound(file):
         print("Warning, unable to load, %s" % file)
     return None
 
-
-# Each type of game object gets an init and an update function.
-# The update function is called once per frame, and it is when each object should
-# change its current position and state.
-#
-# The Player object actually gets a "move" function instead of update,
-# since it is passed extra information about the keyboard.
-
-
 class Player(pg.sprite.Sprite):
     """Representing the player as a moon buggy type car."""
 
