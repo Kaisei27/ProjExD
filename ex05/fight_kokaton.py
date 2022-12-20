@@ -347,12 +347,10 @@ def main(winstyle=0):
                     fullscreen = not fullscreen
 
         keystate = pg.key.get_pressed()
-        ##if pg.K_c :
-           ## img = load_image("one.png")
-            ##Player.images = [img, pg.transform.flip(img, 2, 0)]
-            ##Ult.images = [load_image("jan.png")]
-
-
+        if keystate[pg.K_r]:
+            img = load_image("one.png")
+            Player.images = [img, pg.transform.flip(img, 2, 0)]
+            Ult.images = [load_image("jan.png")]
 
         # clear/erase the last drawn sprites
         all.clear(screen, background)
