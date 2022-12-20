@@ -194,14 +194,6 @@ class Bomb(pg.sprite.Sprite):
         self.rect = self.image.get_rect(midbottom=alien.rect.move(0, 5).midbottom)
 
     def update(self):
-        """called every time around the game loop.
-
-        Every frame we move the sprite 'rect' down.
-        When it reaches the bottom we:
-
-        - make an explosion.
-        - remove the Bomb.
-        """
         self.rect.move_ip(0, self.speed)
         if self.rect.bottom >= 664:
             Explosion(self)
@@ -355,10 +347,10 @@ def main(winstyle=0):
                     fullscreen = not fullscreen
 
         keystate = pg.key.get_pressed()
-        if pg.K_c :
-            img = load_image("one.png")
-            Player.images = [img, pg.transform.flip(img, 2, 0)]
-            Ult.images = [load_image("jan.png")]
+        ##if pg.K_c :
+           ## img = load_image("one.png")
+            ##Player.images = [img, pg.transform.flip(img, 2, 0)]
+            ##Ult.images = [load_image("jan.png")]
 
 
 
